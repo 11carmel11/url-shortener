@@ -5,6 +5,7 @@ body {
   background-color: #fff;
   text-align: center;
   line-height: 1.4em;
+  background-image: url("./icon.ico");
 }
 
 main {
@@ -41,4 +42,11 @@ input {
 input[type="text"] {
   width: 220px;
   text-align: center;
+}
+.bordered {
+  border: 6px double blueviolet;
+  padding: 20px;
+  margin: 10vh 10vw;
+  background-color: rgb(107, 58, 153);
+  border-radius: 30px;
 }

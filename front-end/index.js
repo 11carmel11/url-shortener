@@ -50,5 +50,4 @@ const presentStats = async () => {
     }, 50000);
   }
 };
-
 showStatsButton.addEventListener("click", presentStats);

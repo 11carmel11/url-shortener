@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Carmel`s URL Shortener</title>
+    <title>newRL-Carmel`s URL Shortener</title>
     <link rel="icon" type="image/png" href="./icon.ico" />
     <link href="./style.css" rel="stylesheet" type="text/css" />
     <link
@@ -14,28 +14,45 @@
   </head>
 
   <body>
-    <h1>URL Shortener Microservice</h1>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">newRL</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right" id="navbarButtons">
+            <li>
+              <a href="https://github.com/11carmel11" target="”_blank”"
+                ><span class="glyphicon glyphicon-user"></span> my Github</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <main>
-      <section>
-        <form action="api/shorturl/new" method="POST">
-          <fieldset>
-            <legend>Enter your URL here and get shortened one!</legend>
-            <label for="url_input">URL:</label>
-            <input id="url_input" type="text" placeholder="paste here..." />
-            <input
-              id="submit original"
-              type="button"
-              value="shorten⇶"
-              class="btn btn-primary"
-            />
-          </fieldset>
-        </form>
-      </section>
-      <section>
-        <legend>your new URL is:</legend>
-        <p id="new URL"></p>
-      </section>
-      <section>
+      <div class="bordered">
+        <section>
+          <form action="api/shorturl/new" method="POST">
+            <fieldset>
+              <legend>Enter your URL here and get shortened one!</legend>
+              <label for="url_input">URL:</label>
+              <input id="url_input" type="text" placeholder="paste here..." />
+              <input
+                id="submit original"
+                type="button"
+                value="shorten⇶"
+                class="btn btn-primary"
+              />
+            </fieldset>
+          </form>
+        </section>
+        <section>
+          <legend>your new URL is:</legend>
+          <p id="new URL"></p>
+        </section>
+      </div>
+      <section class="bordered" style="background-color: rgb(55, 94, 109)">
         <legend>get shortened URL`s stats here</legend>
         <label for="stats input">shortened URL:</label>
         <input id="stats input" type="text" placeholder="paste here..." />
@@ -48,14 +65,7 @@
         <div id="info area"></div>
       </section>
     </main>
-    <footer class="text-left text-muted">
-      <p>
-        By
-        <a href="https://github.com/11carmel11">
-          <strong> carmel cohen</strong></a
-        >
-      </p>
-    </footer>
+    <footer class="text-left text-muted"></footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
     <script src="./index.js" defer></script>
