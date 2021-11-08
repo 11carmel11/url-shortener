@@ -4,6 +4,15 @@ const resultArea = document.getElementById("new URL");
 const statsInput = document.getElementById("stats input");
 const showStatsButton = document.getElementById("submit to show stats");
 const infoDiv = document.getElementById("info area");
+// function createCopyButton() {
+//   const copy = document.createElement("button");
+//   copy.id = "copy-button";
+//   copy.type = "button";
+//   copy.innerText = "copy 📝";
+//   copy.onclick = "copyHandler()";
+//   return copy;
+// }
+// const copyButton = createCopyButton();
 const server = "/";
 
 const shortener = async () => {
@@ -16,7 +25,10 @@ const shortener = async () => {
     );
     const { shortUrl_id } = response.data;
     urlInput.value = "";
-    resultArea.innerText = `https://young-chamber-23618.herokuapp.com/original/${shortUrl_id}`;
+    const newRL = document.createElement("a");
+    newRL.href = `https://young-chamber-23618.herokuapp.com/original/${shortUrl_id}`;
+    newRL.innerText = `https://young-chamber-23618.herokuapp.com/original/${shortUrl_id}`;
+    resultArea.append(newRL);
   } catch (error) {
     alert("oops, something went wrong...");
   }
@@ -51,3 +63,8 @@ const presentStats = async () => {
   }
 };
 showStatsButton.addEventListener("click", presentStats);
+
+// const copyHandler = () => {
+//   resultArea.select();
+//   navigator.clipboard.writeText(infoDiv.value);
+// };
