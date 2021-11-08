@@ -28,6 +28,9 @@ const shortener = async () => {
     const newRL = document.createElement("a");
     newRL.href = `https://young-chamber-23618.herokuapp.com/original/${shortUrl_id}`;
     newRL.innerText = `https://young-chamber-23618.herokuapp.com/original/${shortUrl_id}`;
+    resultArea.children.forEach((element) => {
+      element.remove();
+    });
     resultArea.append(newRL);
   } catch (error) {
     alert("oops, something went wrong...");
