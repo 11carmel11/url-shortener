@@ -25,7 +25,7 @@ const shortener = async () => {
     );
     const { shortUrl_id } = response.data;
     urlInput.value = "";
-    const newRL = `https://young-chamber-23618.herokuapp.com/original/${shortUrl_id}`;
+    const newRL = `https://newrl.herokuapp.com/original/${shortUrl_id}`;
     resultArea.innerHTML = `<a target="_blank" href=${newRL}>${newRL}</a>`;
   } catch (error) {
     alert("oops, something went wrong...");
